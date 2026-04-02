@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Judhin — 28-Day Nutrition Plan | Alaa Rabbat Coaching</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A84C;--dark:#0D0D0D;--charcoal:#1A1A1A;--panel:#1E1E1E;--mid:#888;--border:#2A2A2A;--bordergold:rgba(201,168,76,0.25);--green:#2D5A3D;--greenpale:#0f2318;--white:#FFFFFF;--text:#E8E0D0;--textdim:#999;--red:#8B3A3A}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--dark);color:var(--text);min-height:100vh;overflow-x:hidden}
+#loader{position:fixed;inset:0;background:var(--dark);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;transition:opacity 0.6s}
+#loader.gone{opacity:0;pointer-events:none}
+.loader-logo{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--gold);letter-spacing:4px}
+.loader-bar{width:120px;height:1px;background:var(--border);overflow:hidden}
+.loader-fill{height:100%;background:var(--gold);animation:ld 1.4s ease forwards}
+@keyframes ld{from{width:0}to{width:100%}}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(13,13,13,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--bordergold);padding:0 32px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px}
+.monogram{width:36px;height:36px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:700;color:var(--dark)}
+.bname{font-family:'Cormorant Garamond',serif;font-size:16px;color:var(--white)}
+.btag{font-size:9px;color:var(--gold);letter-spacing:2px;text-transform:uppercase}
+.nav a{padding:6px 14px;font-size:11px;letter-spacing:0.8px;text-transform:uppercase;color:var(--mid);text-decoration:none;border-radius:20px;transition:all 0.2s}
+.nav a:hover,.nav a.on{color:var(--gold);background:rgba(201,168,76,0.08)}
+.cbadge{background:linear-gradient(135deg,rgba(201,168,76,0.15),rgba(201,168,76,0.05));border:1px solid var(--bordergold);border-radius:20px;padding:5px 14px;font-size:10px;color:var(--gold);letter-spacing:1px;text-transform:uppercase}
+.hero{background:var(--dark);padding:72px 32px 56px;text-align:center;position:relative;overflow:hidden;border-bottom:1px solid var(--border)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0,rgba(201,168,76,0.06) 0%,transparent 70%)}
+.eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;opacity:0;animation:fu 0.8s 0.3s forwards}
+.hname{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:700;color:var(--white);line-height:1;margin-bottom:8px;opacity:0;animation:fu 0.8s 0.5s forwards}
+.hname span{color:var(--gold)}
+.hsub{font-size:13px;color:var(--mid);max-width:520px;margin:0 auto 32px;line-height:1.8;opacity:0;animation:fu 0.8s 0.7s forwards}
+@keyframes fu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--bordergold);border-radius:12px;overflow:hidden;max-width:800px;margin:0 auto;opacity:0;animation:fu 0.8s 0.9s forwards}
+.sbox{padding:20px 16px;text-align:center;border-right:1px solid var(--bordergold);background:rgba(201,168,76,0.03)}
+.sbox:last-child{border-right:none}
+.sbox.feat{background:var(--gold)}
+.sval{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:700;color:var(--white);line-height:1}
+.sbox.feat .sval{color:var(--dark)}
+.sunit{font-size:9px;color:var(--mid);margin-top:2px}
+.sbox.feat .sunit{color:rgba(0,0,0,0.5)}
+.slabel{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-top:8px}
+.sbox.feat .slabel{color:var(--dark);opacity:0.6}
+.main{max-width:1120px;margin:0 auto;padding:40px 24px}
+section{margin-bottom:56px}
+.stitle{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+.stitle h2{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--white)}
+.stitle .line{flex:1;height:1px;background:var(--bordergold)}
+.stitle .tag{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold)}
+.mgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+.mcard{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:18px;text-align:center}
+.mval{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:700;line-height:1}
+.msub{font-size:11px;margin-top:4px}
+.mlabel{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--mid);margin-top:8px}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fcard{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:16px;border-left:3px solid var(--green)}
+.fcard.red{border-left-color:#C94C4C}
+.fcard.gold{border-left-color:var(--gold)}
+.ftitle{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.fcard.red .ftitle{color:#C94C4C}
+.ftext{font-size:12px;color:var(--mid);line-height:1.6}
+.ggbox{background:var(--greenpale);border:1px solid rgba(45,90,61,0.4);border-radius:14px;padding:28px;margin-bottom:20px}
+.ggrules{display:flex;flex-direction:column;gap:12px}
+.ggrule{display:flex;gap:16px;align-items:flex-start}
+.ggnum{width:28px;height:28px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0;margin-top:1px}
+.ggtxt{font-size:13px;color:var(--text);line-height:1.6}
+.ggtxt strong{color:var(--white)}
+.seq{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.seqchip{background:var(--green);color:var(--white);border-radius:20px;padding:6px 16px;font-size:10px;font-weight:600}
+.wtabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.wtab{padding:8px 20px;border:1px solid var(--border);border-radius:20px;font-size:11px;cursor:pointer;color:var(--mid);background:transparent;font-family:'DM Sans',sans-serif;transition:all 0.2s}
+.wtab.on{background:var(--gold);color:var(--dark);border-color:var(--gold);font-weight:600}
+.wpanel{display:none}
+.wpanel.on{display:block}
+.daycard{background:var(--panel);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:16px;transition:border-color 0.2s}
+.daycard:hover{border-color:var(--bordergold)}
+.dayheader{padding:14px 20px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;border-bottom:1px solid transparent;background:rgba(201,168,76,0.03);gap:12px}
+.dayheader.open{border-bottom-color:var(--border)}
+.daynum{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold);white-space:nowrap}
+.daydow{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--mid);margin-left:6px}
+.daytip{font-size:10px;color:var(--green);font-style:italic;flex:1;text-align:center;line-height:1.4}
+.togicon{width:22px;height:22px;border-radius:50%;background:rgba(201,168,76,0.1);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:16px;font-weight:300;transition:transform 0.3s;flex-shrink:0}
+.daybody{display:none;padding:20px}
+.daybody.open{display:block}
+.mslot{margin-bottom:22px}
+.mslot:last-child{margin-bottom:0}
+.mslotlabel{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.moptions{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* FULL RECIPE CARD */
+.rccard{background:var(--charcoal);border:1px solid var(--border);border-radius:10px;overflow:hidden;transition:border-color 0.2s}
+.rccard:hover{border-color:var(--bordergold)}
+.rchdr{padding:12px 14px;border-bottom:1px solid var(--border);background:rgba(201,168,76,0.04)}
+.optbadge{font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--mid);background:rgba(255,255,255,0.06);border-radius:10px;padding:2px 8px;display:inline-block;margin-bottom:6px}
+.rcname{font-size:14px;font-weight:600;color:var(--white);margin-bottom:3px;line-height:1.3}
+.rcmeta{font-size:10px;color:var(--mid)}
+.rcmacros{display:flex;gap:5px;flex-wrap:wrap;padding:10px 14px;border-bottom:1px solid var(--border);background:rgba(0,0,0,0.2)}
+.mp{font-size:8px;font-weight:700;border-radius:10px;padding:3px 8px}
+.mpk{background:rgba(255,255,255,0.06);color:#aaa}
+.mpp{background:rgba(45,90,61,0.35);color:#7BC89A}
+.mpc{background:rgba(201,168,76,0.2);color:var(--gold)}
+.mpf{background:rgba(139,58,58,0.35);color:#E07070}
+.mpfi{background:rgba(91,74,138,0.35);color:#B0A0D8}
+.rcbody{padding:14px}
+.rccols{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:12px}
+.rcsectitle{font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:600}
+.rclist{list-style:none;padding:0;counter-reset:st}
+.rclist li{font-size:11px;color:var(--text);line-height:1.65;padding-left:14px;position:relative;margin-bottom:2px}
+.rclist li::before{content:'·';position:absolute;left:0;color:var(--gold)}
+.rclist.steps li{counter-increment:st;padding-left:20px}
+.rclist.steps li::before{content:counter(st)'.';font-weight:600;font-size:10px;color:var(--gold)}
+.rctip{background:var(--greenpale);border-left:2px solid var(--green);padding:8px 10px;border-radius:0 6px 6px 0;font-size:11px;color:var(--text);line-height:1.55;font-style:italic;margin-bottom:10px}
+.rctiplabel{color:var(--gold);font-style:normal;font-weight:600;font-size:8px;letter-spacing:1px;text-transform:uppercase;display:block;margin-bottom:3px}
+.rcalts{background:rgba(201,168,76,0.04);border:1px solid rgba(201,168,76,0.12);border-radius:6px;padding:8px 10px;margin-bottom:8px}
+.rcaltstitle{font-size:8px;letter-spacing:1.2px;text-transform:uppercase;color:var(--gold);margin-bottom:5px;font-weight:600}
+.rcaltstext{font-size:10px;color:var(--mid);line-height:1.6}
+.rcphoto{font-size:9px;color:var(--textdim);padding-top:8px;border-top:1px solid var(--border)}
+.rcphoto span{color:var(--mid)}
+.mtable{width:100%;border-collapse:collapse;font-size:12px}
+.mtable th{text-align:left;padding:10px 12px;background:var(--charcoal);color:var(--gold);font-size:9px;text-transform:uppercase;letter-spacing:1px;font-weight:600;border-bottom:1px solid var(--bordergold)}
+.mtable td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text)}
+.mtable tr:last-child td{border-bottom:none}
+.mtable tr:hover td{background:rgba(201,168,76,0.03)}
+.spill{border-radius:20px;padding:3px 10px;font-size:9px;font-weight:600}
+.sok{background:rgba(45,90,61,0.3);color:#7BC89A}
+.swatch{background:rgba(201,168,76,0.2);color:var(--gold)}
+.spriority{background:rgba(139,58,58,0.3);color:#E07070}
+.shopgrid{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.shopcat{padding:18px 20px;border-bottom:1px solid var(--border)}
+.shopcat:nth-child(odd){background:var(--panel);border-right:1px solid var(--border)}
+.shopcat:nth-child(even){background:var(--charcoal)}
+.shopcattitle{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+.shopitem{display:flex;align-items:center;gap:10px;padding:4px 0;font-size:12px;color:var(--text);cursor:pointer}
+.shopitem:hover{color:var(--white)}
+.chkbox{width:14px;height:14px;border:1px solid var(--bordergold);border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.15s}
+.chkbox.ticked{background:var(--green);border-color:var(--green)}
+.chkbox.ticked::after{content:'✓';font-size:8px;color:#fff}
+.shopitem.done span{text-decoration:line-through;color:var(--mid);opacity:0.5}
+.sitefooter{background:var(--charcoal);border-top:1px solid var(--border);padding:32px;text-align:center;font-size:11px;color:var(--mid);margin-top:48px}
+.sitefooter a{color:var(--gold)}
+@media(max-width:800px){
+  .moptions{grid-template-columns:1fr}
+  .rccols{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+  .mgrid{grid-template-columns:1fr 1fr}
+  .stats{grid-template-columns:1fr 1fr}
+  .nav{display:none}
+  .hname{font-size:48px}
+  .shopgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div id="loader"><div class="loader-logo">AR</div><div class="loader-bar"><div class="loader-fill"></div></div></div>
+
+<header class="site-header">
+  <div class="brand">
+    <div class="monogram">AR</div>
+    <div><div class="bname">Alaa Rabbat</div><div class="btag">Online Fitness Coach</div></div>
+  </div>
+  <nav class="nav">
+    <a href="#overview" class="on">Overview</a>
+    <a href="#protocol">Protocol</a>
+    <a href="#meals">Meal Plan</a>
+    <a href="#micros">Micros</a>
+    <a href="#shopping">Shopping</a>
+  </nav>
+  <div class="cbadge">Judhin · 28-Day Plan</div>
+</header>
+
+<div class="hero">
+  <div class="eyebrow">Personalized Nutrition Plan · Dubai · 2026</div>
+  <h1 class="hname"><span>Judhin</span></h1>
+  <p class="hsub">28-Day Fat Loss Plan · Gluten-Free · Dairy-Free · No Shellfish<br>Blood Sugar Balance Protocol · Pre-Diabetes & Hashimoto's Optimized</p>
+  <div class="stats">
+    <div class="sbox"><div class="sval">1,724</div><div class="sunit">kcal/day at rest</div><div class="slabel">BMR</div></div>
+    <div class="sbox"><div class="sval">2,672</div><div class="sunit">kcal/day</div><div class="slabel">TDEE</div></div>
+    <div class="sbox feat"><div class="sval">2,150</div><div class="sunit">kcal/day</div><div class="slabel">Fat Loss Target</div></div>
+    <div class="sbox"><div class="sval">3.0L</div><div class="sunit">minimum/day</div><div class="slabel">Hydration</div></div>
+  </div>
+</div>
+
+<div class="main">
+  <section id="overview">
+    <div class="stitle"><span class="tag">Profile</span><div class="line"></div><h2>Client Overview</h2></div>
+    <div class="mgrid">
+      <div class="mcard"><div class="mval" style="color:#7BC89A">188g</div><div class="msub" style="color:#7BC89A">752 kcal · 35%</div><div class="mlabel">Protein</div></div>
+      <div class="mcard"><div class="mval" style="color:var(--gold)">161g</div><div class="msub" style="color:var(--gold)">644 kcal · 30%</div><div class="mlabel">Carbohydrates</div></div>
+      <div class="mcard"><div class="mval" style="color:#E07070">84g</div><div class="msub" style="color:#E07070">756 kcal · 35%</div><div class="mlabel">Fat</div></div>
+      <div class="mcard"><div class="mval" style="color:#B0A0D8">38g</div><div class="msub" style="color:#B0A0D8">minimum daily</div><div class="mlabel">Fiber</div></div>
+    </div>
+    <div class="fgrid">
+      <div class="fcard red"><div class="ftitle">⚡ Pre-Diabetes / Insulin Resistance</div><div class="ftext">Strict food sequencing, ACV before every main meal, low-GI carbs only, no refined sugar or white flour throughout this plan.</div></div>
+      <div class="fcard red"><div class="ftitle">🦋 Hypothyroid / Hashimoto's</div><div class="ftext">Daily selenium (2 Brazil nuts only), iodine-rich fish 3×/wk, anti-inflammatory eating, limit raw cruciferous vegetables.</div></div>
+      <div class="fcard gold"><div class="ftitle">❤️ High Cholesterol</div><div class="ftext">Salmon/oily fish 3–4×/wk, GF oats daily, olive oil as primary fat, walnuts daily, omega-3 already supplemented.</div></div>
+      <div class="fcard"><div class="ftitle">✅ Supplements (Already Taking)</div><div class="ftext">Creatine · Whey Protein · Omega-3 · Zinc · Magnesium · Vitamin D · B12 — not duplicated in food plan.</div></div>
+      <div class="fcard"><div class="ftitle">🌿 Dietary Restrictions</div><div class="ftext">Gluten-free sensitivity · Lactose-intolerant · No shellfish (allergy) · No pineapple · Every meal in this plan complies fully.</div></div>
+      <div class="fcard gold"><div class="ftitle">🎯 Goal</div><div class="ftext">Current: 87kg → Target: 72kg · 15kg total · ~30 weeks at 500 kcal deficit · Protein 188g/day to preserve muscle mass.</div></div>
+    </div>
+  </section>
+
+  <section id="protocol">
+    <div class="stitle"><span class="tag">Science</span><div class="line"></div><h2>Blood Sugar Balance Protocol</h2></div>
+    <div class="ggbox">
+      <div class="ggrules">
+        <div class="ggrule"><div class="ggnum">1</div><div class="ggtxt"><strong>Savory Breakfast First</strong> — Protein + fat every morning. Never start the day with sugar, juice, or refined carbs. Non-negotiable for pre-diabetes management.</div></div>
+        <div class="ggrule"><div class="ggnum">2</div><div class="ggtxt"><strong>Green Starter Every Meal</strong> — Raw or cooked vegetables BEFORE the main course at lunch and dinner. Reduces glucose spike by up to 30%.</div></div>
+        <div class="ggrule"><div class="ggnum">3</div><div class="ggtxt"><strong>Vinegar Hack</strong> — 1 tbsp apple cider vinegar in 250ml water, 15 minutes before your largest meal. Reduces glucose spike by up to 30%.</div></div>
+        <div class="ggrule"><div class="ggnum">4</div><div class="ggtxt"><strong>Clothe Your Carbs</strong> — Never eat carbohydrates alone. Always pair with protein, fat, and fiber. Applies to snacks too.</div></div>
+        <div class="ggrule"><div class="ggnum">5</div><div class="ggtxt"><strong>Walk After Eating</strong> — A 10-minute walk after meals reduces your glucose spike by up to 37%. Especially important after lunch.</div></div>
+      </div>
+      <div class="seq">
+        <div class="seqchip">① Fiber (vegetables) first</div>
+        <div class="seqchip">② Protein + Fat</div>
+        <div class="seqchip">③ Carbs & Sugars LAST</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="meals">
+    <div class="stitle"><span class="tag">28 Days</span><div class="line"></div><h2>Full Meal Plan with Recipes</h2></div>
+    <div class="wtabs">
+      <button class="wtab on" onclick="sw(1,this)">Week 1</button>
+      <button class="wtab" onclick="sw(2,this)">Week 2</button>
+      <button class="wtab" onclick="sw(3,this)">Week 3</button>
+      <button class="wtab" onclick="sw(4,this)">Week 4</button>
+    </div>
+    <div id="w1" class="wpanel on"></div>
+    <div id="w2" class="wpanel"></div>
+    <div id="w3" class="wpanel"></div>
+    <div id="w4" class="wpanel"></div>
+  </section>
+
+  <section id="micros">
+    <div class="stitle"><span class="tag">Micronutrients</span><div class="line"></div><h2>Key Micronutrient Targets</h2></div>
+    <div style="background:var(--panel);border:1px solid var(--border);border-radius:12px;overflow:hidden">
+      <table class="mtable"><thead><tr><th>Nutrient</th><th>Daily Target</th><th>Best Food Sources</th><th>Status</th></tr></thead><tbody id="mbody"></tbody></table>
+    </div>
+  </section>
+
+  <section id="shopping">
+    <div class="stitle"><span class="tag">Weekly</span><div class="line"></div><h2>Shopping List</h2></div>
+    <p style="font-size:12px;color:var(--mid);margin-bottom:20px">All items GF and dairy-free. Tap each item to check off as you shop.</p>
+    <div class="shopgrid" id="shopgrid"></div>
+  </section>
+</div>
+
+<footer class="sitefooter">
+  <strong style="color:var(--white)">ALAA RABBAT</strong> · Online Fitness Coach · <a href="https://www.alaarabbat.com">www.alaarabbat.com</a><br><br>
+  This plan is created by a certified fitness coach. Consult your physician before major dietary changes.<br>
+  Powered by Alaa Rabbat Nutritionist AI Brain
+</footer>
+
+<script>
+window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('gone'),1300));
+window.addEventListener('scroll',()=>{
+  const ids=['overview','protocol','meals','micros','shopping'];let cur='';
+  ids.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-100)cur=id;});
+  document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+cur));
+});
+function sw(n,btn){
+  document.querySelectorAll('.wpanel').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.wtab').forEach(t=>t.classList.remove('on'));
+  document.getElementById('w'+n).classList.add('on');btn.classList.add('on');
+}
+function td(id){
+  const b=document.getElementById('db-'+id),ic=document.getElementById('ic-'+id),h=document.getElementById('dh-'+id);
+  const o=b.classList.contains('open');
+  b.classList.toggle('open',!o);h.classList.toggle('open',!o);ic.style.transform=o?'':'rotate(45deg)';
+}
+
+const M={
+  B1:{name:"Menemen Eggs (GF/DF)",cuisine:"Middle Eastern",prep:"15 min",kcal:320,P:24,C:14,F:18,Fi:4,
+    ing:["3 eggs","1 large tomato, diced","1 green pepper, diced","1 tbsp olive oil","30g dairy-free feta (optional)","½ tsp cumin + ½ tsp paprika","Cucumber slices (side)"],
+    steps:["Dice peppers and tomato; sauté in olive oil 5 min.","Beat eggs with salt; pour in, stir gently over medium heat.","Season with cumin and paprika.","Remove from heat while slightly soft — residual heat finishes them.","Crumble feta on top; serve with cucumber on the side."],
+    tip:"Eat cucumber FIRST (fiber starter). ACV water 15 min before. Zero glucose spike breakfast.",
+    alts:"Add 50g turkey mince for extra protein | Skip feta for strict DF | Add baby spinach for more fiber",
+    photo:"menemen eggs tomato pepper turkish breakfast cafe"},
+  B2:{name:"GF Protein Oat Bowl",cuisine:"Universal",prep:"10 min",kcal:380,P:38,C:34,F:10,Fi:6,
+    ing:["50g GF rolled oats","3 egg whites","1 scoop unflavoured whey protein","150ml unsweetened almond milk","60g mixed frozen berries","1 tsp cinnamon","1 tbsp almond butter"],
+    steps:["Cook oats with almond milk over medium heat 5 min, stirring.","Stir egg whites in at the end — they cook in immediately.","Remove from heat; fold in whey protein and mix well.","Top with mixed berries and dollop of almond butter.","Eat almond butter first before the oats."],
+    tip:"Eat almond butter FIRST — fat before carbs buffers glucose. Cinnamon boosts insulin sensitivity.",
+    alts:"Plant protein instead of whey | Chia seeds instead of almond butter | Add grated apple for sweetness",
+    photo:"protein oatmeal berries almond butter healthy breakfast"},
+  B3:{name:"Shakshuka (GF/DF)",cuisine:"Middle Eastern",prep:"20 min",kcal:350,P:22,C:18,F:20,Fi:5,
+    ing:["3 eggs","400g canned tomatoes","1 bell pepper, sliced","½ onion, diced","1 tsp cumin + 1 tsp paprika","Chilli flakes to taste","20g dairy-free feta (optional)","Fresh coriander","Side: cucumber + rocket salad"],
+    steps:["Sauté onion and pepper in olive oil 5 min.","Add canned tomatoes and spices; simmer 10 min.","Create 3 wells; crack an egg into each.","Cover; cook until whites are set (~5 min).","Crumble feta on top; serve with side salad — eat salad FIRST."],
+    tip:"Eat the side salad FIRST before the egg pan. Lycopene in tomatoes is anti-inflammatory.",
+    alts:"Add 50g turkey mince to sauce | Extra egg whites for lower fat | Skip feta for strict dairy-free",
+    photo:"shakshuka baked eggs tomato pepper herbs brunch"},
+  B4:{name:"Smoked Salmon & Avocado Bowl",cuisine:"Western",prep:"5 min",kcal:380,P:28,C:8,F:28,Fi:5,
+    ing:["80g smoked salmon","½ avocado, sliced","2 eggs (poached or boiled)","Cherry tomatoes, handful","1 tbsp capers","½ lemon","Fresh dill","Sea salt + black pepper"],
+    steps:["Poach eggs in simmering water 3–4 min (or use boiled).","Arrange smoked salmon on plate.","Fan avocado slices alongside.","Add eggs, cherry tomatoes, capers.","Squeeze lemon over everything; garnish with dill and season."],
+    tip:"Omega-3 rich perfect start. Eat salmon and egg BEFORE avocado. Pair with green tea.",
+    alts:"Smoked mackerel instead of salmon | Add rocket for more greens | Extra egg for more protein",
+    photo:"smoked salmon avocado poached egg dill cherry tomatoes"},
+  B5:{name:"Korean Veggie Omelette (GF/DF)",cuisine:"Korean",prep:"10 min",kcal:240,P:17,C:5,F:17,Fi:1,
+    ing:["3 eggs","2 tbsp grated carrot","2 scallions, sliced","½ tsp sesame oil","Pinch sea salt","1 tsp sesame seeds","50g kimchi (side — probiotic)"],
+    steps:["Beat eggs with sesame oil and salt.","Heat non-stick pan; pour in half the egg mixture.","Scatter grated carrot and scallion over.","Fold omelette and roll tightly while cooking.","Slice into rounds; serve with sesame seeds and kimchi on the side."],
+    tip:"Eat kimchi first for probiotics — critical for gut health with Hashimoto's. Protein-forward start.",
+    alts:"Add 30g smoked salmon inside the roll | Add spinach or mushroom | Side of gochujang dip",
+    photo:"korean rolled omelette gyeran mari sesame scallion"},
+  B6:{name:"Baked Spinach & Eggs (GF/DF)",cuisine:"Mediterranean",prep:"20 min",kcal:290,P:22,C:6,F:19,Fi:2,
+    ing:["3 eggs","100g fresh spinach","1 tbsp olive oil","1 garlic clove, minced","Cherry tomatoes, handful","1 tsp dried oregano","Sea salt + black pepper","30g dairy-free feta (optional)"],
+    steps:["Preheat oven to 180°C.","Sauté garlic and spinach in olive oil until wilted (~3 min).","Transfer to oven-safe dish; add cherry tomatoes.","Create 3 wells; crack an egg into each.","Crumble feta on top; bake 12 min until whites are set."],
+    tip:"Spinach first = fiber before protein. Greens before eggs is perfect glucose sequencing.",
+    alts:"Add roasted red peppers | 2 whole eggs + 2 whites for lower fat | Skip feta for strict DF",
+    photo:"baked eggs spinach cherry tomatoes mediterranean"},
+  B7:{name:"Chia Pudding + Berry Layer",cuisine:"Universal",prep:"5 min + overnight",kcal:340,P:18,C:28,F:16,Fi:12,
+    ing:["4 tbsp chia seeds","250ml unsweetened almond milk","1 tsp vanilla extract","100g coconut yogurt (unsweetened)","80g mixed berries","1 tbsp almond butter","1 tsp cinnamon"],
+    steps:["Mix chia seeds, almond milk, vanilla; stir well.","Refrigerate overnight or minimum 4 hours.","In the morning stir to break up clumps.","Layer: chia pudding → coconut yogurt → mixed berries.","Drizzle almond butter on top; dust with cinnamon. Eat almond butter first."],
+    tip:"Highest-fiber breakfast (12g). Make night before — zero morning effort. Eat almond butter first.",
+    alts:"Coconut milk for creamier texture | Add hemp seeds | Mix in whey protein for extra protein",
+    photo:"chia pudding berries coconut yogurt layered almond butter"},
+  L1:{name:"Lebanese Chicken Fattoush Bowl",cuisine:"Lebanese",prep:"20 min",kcal:460,P:44,C:28,F:16,Fi:6,
+    ing:["200g chicken breast","Romaine lettuce, chopped","2 tomatoes, diced","1 cucumber, diced","6 radishes, sliced","Fresh mint + flat-leaf parsley","1 GF crispbread (broken)","1 tsp sumac","Lemon juice + 1 tbsp olive oil","Pomegranate seeds (garnish)"],
+    steps:["Season chicken with sumac, olive oil, salt; grill 5–6 min each side.","Build salad: romaine, tomato, cucumber, radish, mint, parsley.","Dress with lemon juice, olive oil, sumac; toss.","Slice grilled chicken; place on top.","Add crispbread and pomegranate — eat ALL salad FIRST."],
+    tip:"Eat ALL the salad before any carb. Lemon acid = natural glucose hack (same as ACV).",
+    alts:"Grilled salmon instead of chicken | Pumpkin seeds instead of crispbread | Add ½ avocado",
+    photo:"grilled chicken fattoush bowl sumac lemon herbs pomegranate"},
+  L2:{name:"Tuna Nicoise Salad (GF/DF)",cuisine:"French Mediterranean",prep:"15 min",kcal:430,P:42,C:18,F:18,Fi:5,
+    ing:["150g tuna in olive oil (drained)","2 eggs, boiled and halved","100g green beans, blanched","Cherry tomatoes, handful","6 kalamata olives","1 tbsp capers","¼ red onion, thin slices","Dressing: lemon + olive oil + Dijon"],
+    steps:["Boil eggs 8 min; blanch green beans 3 min. Cool both.","Drain tuna and break into chunks.","Arrange green beans and tomatoes on plate.","Add tuna, halved eggs, olives, capers, onion.","Whisk dressing; drizzle over salad — eat green beans first."],
+    tip:"Green beans first (fiber). Protein from tuna + eggs keeps glucose flat all afternoon. No bread.",
+    alts:"Grilled salmon instead of tuna | Add ½ avocado for more fat | Skip eggs for lighter version",
+    photo:"nicoise salad tuna green beans boiled eggs olives capers"},
+  L3:{name:"Turkish Red Lentil Soup + Side Salad",cuisine:"Turkish",prep:"25 min",kcal:360,P:18,C:48,F:8,Fi:16,
+    ing:["120g red lentils, rinsed","1 onion, diced","1 carrot, diced","1 tsp cumin + 1 tsp turmeric + ½ tsp paprika","1 litre vegetable broth","Juice of 1 lemon","1 tbsp olive oil (to drizzle)","Side: rocket + cucumber salad"],
+    steps:["Sauté onion and carrot in 1 tsp olive oil 5 min.","Add lentils, spices, broth; bring to boil.","Simmer 20 min until lentils are completely soft.","Blend until smooth with a hand blender.","Finish with lemon juice; drizzle olive oil; eat side salad FIRST."],
+    tip:"Eat the side salad FIRST — fiber-first rule applies even to soups. Highest fiber lunch (16g).",
+    alts:"Add extra spinach into the soup | Top with pumpkin seeds for crunch | Add ginger for thyroid",
+    photo:"turkish red lentil soup bowl lemon mint fresh herbs"},
+  L4:{name:"Japanese Salmon Teriyaki Bowl",cuisine:"Japanese",prep:"20 min",kcal:520,P:40,C:42,F:15,Fi:4,
+    ing:["180g salmon fillet","150g cooked brown rice (cooled)","50g edamame (shelled)","½ cucumber, sliced","½ avocado, sliced","1 nori sheet, cut into strips","1 tbsp sesame seeds","2 tbsp tamari (GF) + ½ tsp honey (glaze)"],
+    steps:["Cook and spread rice to cool (resistant starch forms when cooled).","Mix tamari and honey; brush over salmon.","Pan-sear salmon 3–4 min each side.","Build bowl with cooled rice as base.","Arrange edamame, cucumber, avocado; top with salmon, nori, sesame — eat edamame first."],
+    tip:"Cooled rice = resistant starch (lower GI). Eat edamame (fiber) before salmon. Omega-3 daily.",
+    alts:"Tuna steak instead of salmon | Cauliflower rice for lower carb | Add pickled ginger for probiotics",
+    photo:"salmon teriyaki bowl edamame cucumber avocado nori sesame"},
+  L5:{name:"Mediterranean Quinoa Bowl",cuisine:"Mediterranean",prep:"15 min",kcal:450,P:22,C:45,F:18,Fi:8,
+    ing:["150g cooked quinoa (cooled)","80g chickpeas (roasted 15 min at 200°C)","50g dairy-free feta (optional)","Roasted red peppers (from jar)","6 kalamata olives","5 sun-dried tomatoes","½ cucumber, diced","Fresh basil + parsley","Dressing: lemon + olive oil + oregano"],
+    steps:["Roast chickpeas at 200°C 15 min until crispy.","Cook and cool quinoa.","Combine quinoa with all vegetables in a bowl.","Add feta, olives, sun-dried tomatoes, fresh herbs.","Dress with lemon, olive oil, oregano — eat chickpeas first."],
+    tip:"Quinoa = complete protein + fiber. Chickpeas first for fiber. Olive oil buffers glucose from carbs.",
+    alts:"Add grilled chicken for more protein | Avocado instead of feta (DF) | Pumpkin seeds for crunch",
+    photo:"mediterranean quinoa bowl chickpeas feta olives roasted peppers"},
+  L6:{name:"Thai Larb Ground Turkey (GF/DF)",cuisine:"Thai",prep:"15 min",kcal:320,P:30,C:12,F:16,Fi:3,
+    ing:["200g ground turkey","2 shallots, thinly sliced","Juice of 2 limes","2 tbsp fish sauce (GF)","1 tsp toasted rice powder (optional)","Dried chilli flakes","Fresh mint + coriander (generous)","Butter lettuce cups to serve"],
+    steps:["Dry-cook ground turkey in pan over high heat, breaking apart.","Remove from heat; cool slightly 2 min.","Toss with lime juice, fish sauce, chilli, shallots.","Fold in fresh mint and coriander generously.","Serve in lettuce cups; sprinkle toasted rice powder."],
+    tip:"Lettuce cup = zero-carb delivery. Protein-first eating made effortless. Lime = acid glucose hack.",
+    alts:"Ground chicken instead of turkey | Add cucumber inside cups | Skip rice powder for lower carb",
+    photo:"thai larb ground turkey salad lettuce cups lime herbs mint"},
+  L7:{name:"Korean Bibimbap (Low-GI)",cuisine:"Korean",prep:"25 min",kcal:480,P:34,C:38,F:16,Fi:7,
+    ing:["150g lean beef mince (or tofu)","100g cauliflower rice + 50g cooked brown rice","80g baby spinach","1 carrot, julienned","50g bean sprouts","1 zucchini, julienned","1 egg, fried","1 tsp gochujang","1 tsp sesame oil + 2 tsp tamari (GF)"],
+    steps:["Stir-fry each vegetable separately with sesame oil (2 min each).","Cook beef with tamari and sesame oil until browned.","Steam cauliflower rice 3 min; mix with brown rice.","Layer rice blend in bowl; arrange veg and beef on top.","Add fried egg and gochujang — mix everything before eating."],
+    tip:"Eat vegetables first before mixing. Cauliflower rice cuts carbs ~40%. Gochujang = fermented probiotic.",
+    alts:"Tofu for plant-based | Skip egg for lighter | Add more vegetables, reduce rice",
+    photo:"bibimbap bowl cauliflower rice beef vegetables fried egg korean"},
+  L8:{name:"Greek Baked Cod (Plaki)",cuisine:"Greek",prep:"30 min",kcal:320,P:36,C:14,F:12,Fi:4,
+    ing:["200g cod fillet","2 tomatoes, sliced","½ onion, sliced","2 garlic cloves, minced","6 kalamata olives","1 tbsp capers","2 tbsp olive oil","Juice of 1 lemon","Fresh parsley","1 tsp dried oregano","Side: large green salad"],
+    steps:["Preheat oven to 180°C.","Layer sliced onion and tomato in baking dish.","Place cod on top; add olives, capers, garlic.","Drizzle with olive oil and lemon; sprinkle oregano.","Bake 20–25 min until fish flakes; garnish with parsley. Eat salad first."],
+    tip:"Large green salad FIRST before the fish. Light high-protein — excellent for cholesterol management.",
+    alts:"Sea bass or haddock instead of cod | Add capers for more brine | Serve with 50g cooled quinoa",
+    photo:"greek baked cod plaki tomatoes olives capers lemon parsley"},
+  D1:{name:"Baked Salmon, Asparagus & Miso Broth",cuisine:"Japanese-Fusion",prep:"20 min",kcal:490,P:44,C:10,F:28,Fi:5,
+    ing:["200g salmon fillet","150g asparagus, trimmed","1 tsp white miso paste","1 tsp sesame oil","1 garlic clove, minced","1 tsp fresh ginger, grated","½ lemon","1 tsp sesame seeds","Micro greens or coriander"],
+    steps:["Mix miso, sesame oil, garlic; brush over salmon. Marinate 10 min.","Bake salmon at 200°C for 12–14 min.","Blanch asparagus in boiling water 2 min; drain.","Make miso broth: dissolve ½ tsp miso in 150ml hot water + ginger.","Plate asparagus, lay salmon on top; pour broth around; garnish."],
+    tip:"Drink miso broth FIRST (umami acid hack). Asparagus before salmon. Omega-3 fights inflammation daily.",
+    alts:"Cod or sea bass instead of salmon | Add 50g cooled brown rice | Use tamari instead of miso",
+    photo:"baked salmon asparagus miso broth sesame healthy dinner"},
+  D2:{name:"Lamb Kofta & Quinoa Tabbouleh",cuisine:"Middle Eastern",prep:"25 min",kcal:510,P:40,C:26,F:24,Fi:6,
+    ing:["250g lamb mince","½ onion, grated","Large bunch flat-leaf parsley, finely chopped","1 tsp cumin + 1 tsp coriander + ½ tsp cinnamon","100g quinoa (cooked and cooled)","2 tomatoes, finely diced","1 cucumber, finely diced","Juice of 2 lemons","2 tbsp olive oil","Salt + pepper"],
+    steps:["Mix lamb with grated onion and spices; form onto 4 skewers.","Grill kofta on high heat 3–4 min each side.","Cook quinoa; spread on a tray to cool 10 min.","Mix quinoa with parsley, tomato, cucumber, lemon, olive oil, salt.","Serve kofta over tabbouleh — eat tabbouleh first."],
+    tip:"Tabbouleh FIRST (fiber + lemon acid). Quinoa = complete protein, lower GI than couscous.",
+    alts:"Chicken mince instead of lamb | Add more veg to tabbouleh | Cauliflower rice base for lower carb",
+    photo:"lamb kofta skewers grilled quinoa tabbouleh herbs lemon"},
+  D3:{name:"Thai Green Curry + Shirataki (GF/DF)",cuisine:"Thai",prep:"20 min",kcal:390,P:36,C:12,F:22,Fi:4,
+    ing:["200g chicken breast, cubed","1 tbsp green curry paste (GF)","200ml light coconut milk","200g shirataki noodles (drained + rinsed)","1 zucchini, sliced","1 bell pepper, sliced","Juice of ½ lime","Fresh Thai basil","1 tbsp fish sauce (GF)","1 tsp coconut oil"],
+    steps:["Fry curry paste in coconut oil 1 min until fragrant.","Add chicken; cook 3–4 min until sealed.","Pour in coconut milk; add zucchini and pepper.","Simmer 8–10 min until chicken is cooked.","Drain shirataki; add to curry; finish with lime, basil, fish sauce."],
+    tip:"Shirataki = zero-carb noodles. Eat vegetables from curry first. Coconut fat buffers glucose.",
+    alts:"Prawns instead of chicken | Add spinach for more greens | Full-fat coconut milk for more calories",
+    photo:"thai green curry chicken shirataki noodles coconut milk lime basil"},
+  D4:{name:"Italian Zucchini Lasagne (GF/DF)",cuisine:"Italian",prep:"45 min",kcal:430,P:36,C:14,F:24,Fi:4,
+    ing:["2 large zucchini, thinly sliced lengthways","300g beef or turkey mince","400g passata","1 onion + 2 garlic cloves, diced","150g dairy-free ricotta or cashew cheese","1 egg","Fresh basil + dried oregano","Side: rocket + olive oil salad"],
+    steps:["Grill zucchini slices 2 min each side to remove moisture.","Make ragu: fry mince, onion, garlic; add passata; simmer 15 min.","Mix dairy-free ricotta with egg, basil, salt.","Layer in baking dish: zucchini → ragu → ricotta — repeat x2.","Bake 180°C 30 min. Eat rocket salad first."],
+    tip:"Zucchini replaces pasta = ~80% carb reduction. Start with rocket + olive oil. Great for cholesterol.",
+    alts:"Turkey mince for lower fat | Add spinach layers | Nutritional yeast for B12 boost",
+    photo:"zucchini lasagne low carb beef ricotta baked italian"},
+  D5:{name:"West African Egusi Soup with Chicken",cuisine:"Nigerian",prep:"40 min",kcal:480,P:40,C:14,F:28,Fi:6,
+    ing:["200g chicken thighs (skin removed)","100g ground egusi (melon seeds)","200g spinach or bitter leaf","2 tomatoes + 1 pepper (blended)","½ onion, diced","2 tbsp palm oil","1 tbsp ground crayfish","1 scotch bonnet (adjust heat)","Sea salt + seasoning"],
+    steps:["Blend tomatoes, pepper, half the onion smooth.","Fry blended sauce in palm oil 5–6 min with remaining onion.","Add ground egusi; stir and fry 3 min.","Add chicken + 300ml water; season; simmer 20 min.","Add spinach last 2 min; serve with tiny portion cauliflower fufu."],
+    tip:"High protein + fat from egusi = excellent glucose stability. Eat spinach from the bowl first.",
+    alts:"Turkey instead of chicken | More spinach, less egusi for lower fat | Reduce palm oil for lower sat fat",
+    photo:"egusi soup chicken spinach palm oil nigerian stew bowl"},
+  D6:{name:"Turkish Stuffed Bell Peppers (GF/DF)",cuisine:"Turkish",prep:"40 min",kcal:420,P:28,C:32,F:18,Fi:7,
+    ing:["4 bell peppers, mixed colours","200g lamb or beef mince","80g quinoa (cooked)","1 tomato, diced","½ onion, diced","20g pumpkin seeds","1 tsp allspice + ½ tsp cinnamon","300ml passata (for baking)","Fresh mint + parsley","Side: green salad"],
+    steps:["Slice tops off peppers; remove seeds and set aside.","Sauté mince with onion, spices, pumpkin seeds until browned.","Mix in cooked quinoa, diced tomato, fresh herbs.","Stuff peppers generously; place in deep baking dish.","Pour passata around peppers; cover with foil; bake 180°C 35 min. Eat salad first."],
+    tip:"Eat the pepper skin (high fiber). Green salad FIRST. Quinoa = GF complete protein.",
+    alts:"Chicken mince instead of lamb | Add extra herbs to stuffing | Top with dairy-free cheese if desired",
+    photo:"stuffed bell peppers lamb quinoa tomato sauce baked"},
+  D7:{name:"Greek Baked Cod with Roasted Veg",cuisine:"Greek",prep:"30 min",kcal:340,P:38,C:14,F:12,Fi:5,
+    ing:["200g cod fillet","1 zucchini, sliced","1 red pepper, sliced","Cherry tomatoes, handful","2 garlic cloves, minced","2 tbsp olive oil","Juice of 1 lemon","1 tsp dried oregano","Fresh dill","Sea salt + black pepper"],
+    steps:["Preheat oven to 200°C.","Toss zucchini, pepper, tomatoes in olive oil, garlic, oregano; spread on tray.","Place cod on top of vegetables; drizzle with lemon.","Season everything with salt and pepper.","Roast 20–22 min until cod flakes; garnish with fresh dill."],
+    tip:"Light low-carb dinner = excellent overnight glucose stability. Eat vegetables from the tray first.",
+    alts:"Sea bass or haddock instead of cod | Add olives and capers | Serve with 50g cooled quinoa",
+    photo:"greek baked cod zucchini roasted vegetables lemon dill"},
+  S1:{name:"Hummus & Vegetable Sticks",cuisine:"Middle Eastern",prep:"2 min",kcal:190,P:7,C:16,F:10,Fi:6,
+    ing:["70g hummus (GF)","Cucumber sticks","Carrot sticks","Celery sticks","Radishes"],
+    steps:["Portion hummus into a small bowl.","Slice all vegetables into sticks.","Eat vegetables first, then dip into hummus.","",""],
+    tip:"Fiber + fat + plant protein. Never eat carbs without a protein-fat companion. Ideal pre-dinner snack.",
+    alts:"Add 1 boiled egg alongside | Swap hummus for tahini | Add bell pepper strips",
+    photo:"hummus vegetable sticks cucumber carrot celery dip"},
+  S2:{name:"Boiled Egg & Avocado Half",cuisine:"Universal",prep:"5 min",kcal:230,P:9,C:4,F:20,Fi:3,
+    ing:["1 large egg","½ avocado","Sea salt","Chilli flakes","½ lemon"],
+    steps:["Boil egg 7–8 min for hard-boiled; cool and peel.","Halve avocado and remove stone.","Season both with salt and chilli.","Squeeze lemon over avocado.","Eat egg first, then avocado."],
+    tip:"Healthy fat + protein = 3–4h satiety with zero glucose spike. Perfect pre-workout or afternoon snack.",
+    alts:"2 eggs for more protein | Add 30g smoked salmon | 1 GF rice cake (eat after egg)",
+    photo:"boiled egg avocado half sea salt chilli lemon"},
+  S3:{name:"Walnuts + Dark Chocolate 85%",cuisine:"Universal",prep:"1 min",kcal:210,P:5,C:6,F:20,Fi:3,
+    ing:["20g walnuts","20g dark chocolate (85%+ cocoa)"],
+    steps:["Portion walnuts into a small bowl.","Eat walnuts FIRST — always fat before sugar.","Then eat dark chocolate slowly.","",""],
+    tip:"Omega-3 from walnuts + flavanols from chocolate. Eat nuts before chocolate. Add 2 Brazil nuts for selenium.",
+    alts:"Almonds instead of walnuts | 90% chocolate for less sugar | Add 1 boiled egg for extra protein",
+    photo:"walnuts dark chocolate 85 percent healthy snack"},
+  S4:{name:"Protein Smoothie (GF/DF)",cuisine:"Universal",prep:"5 min",kcal:280,P:28,C:20,F:8,Fi:5,
+    ing:["1 scoop whey or plant protein","150ml unsweetened almond milk","60g frozen mixed berries","1 tbsp chia seeds","½ cup frozen spinach","Handful of ice"],
+    steps:["Add all ingredients to blender.","Blend on high 30 seconds.","Check consistency; add more ice if needed.","Pour and drink immediately.",""],
+    tip:"Fiber from chia + spinach slows glucose absorption. Berries = lowest GI fruit. No banana.",
+    alts:"Plant protein instead of whey | Add flaxseeds for omega-3 | Coconut milk for more fat",
+    photo:"protein smoothie berries spinach chia seeds almond milk"},
+  S5:{name:"Edamame + Sea Salt",cuisine:"Universal",prep:"5 min",kcal:120,P:11,C:9,F:5,Fi:5,
+    ing:["100g edamame (shelled, frozen)","Sea salt","Chilli flakes + lemon (optional)"],
+    steps:["Steam or microwave edamame 3–4 min from frozen.","Drain and season with sea salt.","Add chilli flakes and lemon if desired.","",""],
+    tip:"Complete plant protein + high fiber = ideal afternoon snack. Anti-inflammatory and thyroid-supportive.",
+    alts:"Add 1 tbsp tamari for Japanese flavour | Mix with pumpkin seeds | Serve warm or cold",
+    photo:"edamame sea salt chilli lemon healthy snack bowl"},
+  S6:{name:"Apple + Almond Butter",cuisine:"Universal",prep:"2 min",kcal:195,P:4,C:22,F:11,Fi:5,
+    ing:["1 medium apple, sliced","1 tbsp almond butter"],
+    steps:["Eat the almond butter FIRST — a spoonful before touching the apple.","Then eat apple slices dipped in almond butter.","","",""],
+    tip:"Fat BEFORE fruit sugar. The fat-first rule reduces the glucose spike from apple. Never eat fruit alone.",
+    alts:"Pear instead of apple | Sunflower seed butter (nut-free) | Add 1 boiled egg for more protein",
+    photo:"apple slices almond butter healthy snack"},
+  S7:{name:"Coconut Yogurt + Berries + Seeds",cuisine:"Universal",prep:"3 min",kcal:220,P:12,C:18,F:8,Fi:3,
+    ing:["150g unsweetened coconut yogurt","60g mixed berries","1 tbsp pumpkin seeds","1 tbsp chia seeds","½ tsp cinnamon"],
+    steps:["Spoon coconut yogurt into bowl.","Top with mixed berries.","Sprinkle pumpkin seeds and chia seeds.","Dust with cinnamon.","Eat seeds + yogurt before the berries (fat/protein first)."],
+    tip:"Dairy-free probiotic snack. Eat seeds first. Berries = lowest GI fruit. Pumpkin seeds = zinc + selenium.",
+    alts:"Add 1 tbsp almond butter for more fat | Use frozen berries warmed | Crushed walnuts on top",
+    photo:"coconut yogurt berries pumpkin seeds chia dairy free snack"}
+};
+
+const PLAN=[
+  {day:1,dow:"Monday",B:["B1","B2"],L:["L1","L2"],D:["D1","D2"],S:["S1","S2"],tip:"ACV water 15 min before lunch. Start every meal with vegetables."},
+  {day:2,dow:"Tuesday",B:["B3","B7"],L:["L3","L4"],D:["D3","D7"],S:["S3","S7"],tip:"Walk 10 minutes after dinner — reduces glucose spike by 37%."},
+  {day:3,dow:"Wednesday",B:["B5","B4"],L:["L5","L6"],D:["D4","D6"],S:["S5","S4"],tip:"Never eat fruit alone — always pair with nuts or protein."},
+  {day:4,dow:"Thursday",B:["B6","B2"],L:["L8","L7"],D:["D5","D1"],S:["S1","S2"],tip:"Largest meal at lunch when insulin sensitivity peaks."},
+  {day:5,dow:"Friday",B:["B1","B7"],L:["L1","L3"],D:["D2","D3"],S:["S3","S5"],tip:"Chew slowly — digestion starts in the mouth."},
+  {day:6,dow:"Saturday",B:["B5","B2"],L:["L4","L5"],D:["D7","D4"],S:["S6","S4"],tip:"2 Brazil nuts today for selenium — Hashimoto's thyroid support."},
+  {day:7,dow:"Sunday",B:["B3","B4"],L:["L2","L7"],D:["D5","D6"],S:["S1","S7"],tip:"Week 1 check: energy, hunger, satisfaction levels."},
+  {day:8,dow:"Monday",B:["B1","B2"],L:["L1","L3"],D:["D1","D2"],S:["S5","S2"],tip:"Week 2 — hit 3L water before 6pm every day."},
+  {day:9,dow:"Tuesday",B:["B6","B7"],L:["L2","L4"],D:["D3","D7"],S:["S1","S3"],tip:"Cook double dinner portions for next day's lunch."},
+  {day:10,dow:"Wednesday",B:["B5","B2"],L:["L5","L6"],D:["D4","D6"],S:["S6","S4"],tip:"Take creatine with your post-workout meal today."},
+  {day:11,dow:"Thursday",B:["B3","B4"],L:["L1","L7"],D:["D5","D1"],S:["S5","S2"],tip:"Eat dinner 2–3h before bed — overnight fast aids fat loss."},
+  {day:12,dow:"Friday",B:["B1","B2"],L:["L3","L2"],D:["D2","D3"],S:["S1","S7"],tip:"Add an extra handful of leafy greens to any meal today."},
+  {day:13,dow:"Saturday",B:["B6","B7"],L:["L4","L5"],D:["D7","D4"],S:["S3","S4"],tip:"Week 2 complete — weigh in under same conditions as Day 1."},
+  {day:14,dow:"Sunday",B:["B5","B2"],L:["L1","L7"],D:["D5","D6"],S:["S6","S5"],tip:"Energy and satiety should be noticeably improved by now."},
+  {day:15,dow:"Monday",B:["B1","B4"],L:["L1","L3"],D:["D1","D2"],S:["S1","S2"],tip:"Week 3 — increase training intensity if energy allows."},
+  {day:16,dow:"Tuesday",B:["B3","B7"],L:["L2","L4"],D:["D3","D7"],S:["S3","S7"],tip:"Fiber 38g minimum every day — your best blood sugar tool."},
+  {day:17,dow:"Wednesday",B:["B6","B2"],L:["L5","L6"],D:["D4","D6"],S:["S5","S4"],tip:"Cooled quinoa/rice has more resistant starch — prep ahead."},
+  {day:18,dow:"Thursday",B:["B5","B2"],L:["L1","L7"],D:["D5","D1"],S:["S6","S2"],tip:"7–8h sleep reduces cortisol and improves blood sugar control."},
+  {day:19,dow:"Friday",B:["B1","B4"],L:["L3","L2"],D:["D2","D3"],S:["S1","S5"],tip:"Omega-3 supplement also reduces LDL cholesterol — stay consistent."},
+  {day:20,dow:"Saturday",B:["B3","B7"],L:["L4","L5"],D:["D7","D4"],S:["S3","S4"],tip:"Aim for 5+ different vegetable colours this week."},
+  {day:21,dow:"Sunday",B:["B6","B2"],L:["L1","L7"],D:["D5","D6"],S:["S7","S2"],tip:"Week 3 done — energy, skin, and satiety should be much improved."},
+  {day:22,dow:"Monday",B:["B5","B2"],L:["L1","L3"],D:["D1","D2"],S:["S1","S3"],tip:"Week 4 — final stretch. Consistency, not perfection."},
+  {day:23,dow:"Tuesday",B:["B1","B4"],L:["L2","L4"],D:["D3","D7"],S:["S5","S6"],tip:"Magnesium before bed improves insulin sensitivity."},
+  {day:24,dow:"Wednesday",B:["B3","B7"],L:["L5","L6"],D:["D4","D6"],S:["S4","S2"],tip:"Anti-inflammatory focus: salmon 4× this week, olive oil daily."},
+  {day:25,dow:"Thursday",B:["B6","B2"],L:["L1","L7"],D:["D5","D1"],S:["S1","S7"],tip:"Protein at every meal is your #1 blood sugar strategy."},
+  {day:26,dow:"Friday",B:["B5","B2"],L:["L3","L2"],D:["D2","D3"],S:["S5","S3"],tip:"Cholesterol: olive oil, GF oats, salmon, walnuts — daily."},
+  {day:27,dow:"Saturday",B:["B1","B4"],L:["L4","L5"],D:["D7","D4"],S:["S6","S4"],tip:"Final weekend — batch cook for continued momentum."},
+  {day:28,dow:"Sunday",B:["B3","B7"],L:["L1","L7"],D:["D5","D6"],S:["S1","S2"],tip:"28 days complete! Book your check-in to review and plan Month 2."},
+];
+
+function rc(key,label){
+  const m=M[key];
+  if(!m)return'<div class="rccard"><div class="rchdr"><span class="optbadge">'+label+'</span><div class="rcname">Not found</div></div></div>';
+  const ing=m.ing.map(i=>`<li>${i}</li>`).join('');
+  const steps=m.steps.filter(s=>s).map(s=>`<li>${s}</li>`).join('');
+  return`<div class="rccard">
+    <div class="rchdr">
+      <span class="optbadge">${label}</span>
+      <div class="rcname">${m.name}</div>
+      <div class="rcmeta">${m.cuisine} &nbsp;·&nbsp; ${m.prep}</div>
+    </div>
+    <div class="rcmacros">
+      <span class="mp mpk">${m.kcal} kcal</span>
+      <span class="mp mpp">Protein: ${m.P}g</span>
+      <span class="mp mpc">Carbs: ${m.C}g</span>
+      <span class="mp mpf">Fat: ${m.F}g</span>
+      <span class="mp mpfi">Fiber: ${m.Fi}g</span>
+    </div>
+    <div class="rcbody">
+      <div class="rccols">
+        <div><div class="rcsectitle">Ingredients</div><ul class="rclist">${ing}</ul></div>
+        <div><div class="rcsectitle">Instructions</div><ul class="rclist steps">${steps}</ul></div>
+      </div>
+      <div class="rctip"><span class="rctiplabel">💡 Smart Tip</span>${m.tip}</div>
+      <div class="rcalts"><div class="rcaltstitle">↔ Alternatives</div><div class="rcaltstext">${m.alts}</div></div>
+      <div class="rcphoto">📷 Photo search: <span>${m.photo}</span></div>
+    </div>
+  </div>`;
+}
+
+function buildPlan(){
+  const we=[null,document.getElementById('w1'),document.getElementById('w2'),document.getElementById('w3'),document.getElementById('w4')];
+  const sl={B:'☀️ Breakfast',L:'🌿 Lunch',D:'🌙 Dinner',S:'🥜 Snack'};
+  PLAN.forEach(d=>{
+    const wk=Math.ceil(d.day/7),id='d'+d.day;
+    let sh='';
+    ['B','L','D','S'].forEach(s=>{
+      sh+=`<div class="mslot"><div class="mslotlabel">${sl[s]}</div><div class="moptions">${rc(d[s][0],'Option 1')}${rc(d[s][1],'Option 2')}</div></div>`;
+    });
+    we[wk].insertAdjacentHTML('beforeend',`<div class="daycard">
+      <div class="dayheader" id="dh-${id}" onclick="td('${id}')">
+        <div style="display:flex;align-items:center;flex-shrink:0"><span class="daynum">Day ${d.day}</span><span class="daydow">${d.dow}</span></div>
+        <div class="daytip">💡 ${d.tip}</div>
+        <div class="togicon" id="ic-${id}">+</div>
+      </div>
+      <div class="daybody" id="db-${id}">${sh}</div>
+    </div>`);
+  });
+}
+
+const MICROS=[
+  {n:"Iron",t:"8 mg",f:"Red meat, lentils, spinach, pumpkin seeds",s:"monitor"},
+  {n:"Selenium",t:"55 mcg (2 Brazil nuts)",f:"Brazil nuts (2/day max), salmon, tuna, eggs",s:"priority"},
+  {n:"Iodine",t:"150 mcg",f:"Cod, salmon, eggs, seaweed snacks",s:"priority"},
+  {n:"Omega-3",t:"2–3g EPA+DHA",f:"Salmon, sardines, mackerel + supplementing",s:"ok"},
+  {n:"Vitamin D",t:"Supplementing",f:"Supplement + salmon, egg yolk, sunlight",s:"ok"},
+  {n:"B12",t:"Supplementing",f:"Supplement + meat, eggs",s:"ok"},
+  {n:"Zinc",t:"11 mg (supplementing)",f:"Beef, pumpkin seeds, cashews",s:"ok"},
+  {n:"Magnesium",t:"420 mg (supplementing)",f:"Leafy greens, dark chocolate, seeds",s:"ok"},
+  {n:"Fiber",t:"38 g minimum",f:"Vegetables, legumes, GF oats, quinoa, chia",s:"monitor"},
+  {n:"Calcium",t:"1,000 mg",f:"Sardines (with bones), almonds, coconut yogurt",s:"monitor"},
+  {n:"Potassium",t:"3,400 mg",f:"Avocado, lentils, sweet potato, banana (small)",s:"monitor"},
+  {n:"Folate",t:"400 mcg",f:"Leafy greens, lentils, eggs",s:"ok"},
+];
+const mb=document.getElementById('mbody');
+MICROS.forEach(m=>{
+  const c=m.s==='ok'?'sok':m.s==='priority'?'spriority':'swatch';
+  const l=m.s==='ok'?'On track':m.s==='priority'?'⚡ Priority':'Monitor';
+  mb.insertAdjacentHTML('beforeend',`<tr><td><strong>${m.n}</strong></td><td style="color:var(--gold)">${m.t}</td><td style="font-size:11px;color:var(--mid)">${m.f}</td><td><span class="spill ${c}">${l}</span></td></tr>`);
+});
+
+const SHOP={
+  "🥩 Proteins":["Chicken breast × 800g","Salmon fillet × 600g","Cod fillet × 400g","Lamb mince × 500g","Tuna in olive oil × 4 tins","Eggs × 18","Turkey mince × 300g"],
+  "🥦 Vegetables":["Asparagus × 300g","Zucchini × 4","Bell peppers × 6 (mixed)","Cherry tomatoes × 400g","Cucumber × 4","Romaine lettuce × 2","Baby spinach × 300g","Eggplant × 2","Carrots × 6","Red onion × 3","Garlic × 2 bulbs","Rocket/Arugula × 2 bags"],
+  "🌾 Grains (GF)":["GF rolled oats × 500g","Quinoa × 400g","Brown rice × 500g","GF crispbreads × 1 pack","Buckwheat × 200g"],
+  "🥑 Fats & Nuts":["Extra virgin olive oil × 500ml","Avocados × 5","Almond butter × 1 jar","Walnuts × 150g","Almonds × 150g","Brazil nuts × 100g (2/day ONLY — selenium)","Pumpkin seeds × 150g","Dark chocolate 85%+ × 100g"],
+  "🥛 Dairy-Free":["Unsweetened almond milk × 1L","Coconut yogurt (unsweetened) × 400g","Dairy-free feta × 100g (optional)","Dairy-free ricotta / cashew cheese × 150g"],
+  "🫙 Pantry":["White miso paste","Sesame oil","Tamari (GF soy sauce)","Apple cider vinegar (with mother)","Canned tomatoes × 4 tins","Chickpeas × 2 tins","Red lentils × 300g","Hummus (GF) × 200g","Chia seeds × 200g","Capers × 1 jar","Kalamata olives × 1 jar","Fish sauce (GF)"],
+  "🌿 Fresh Herbs":["Flat-leaf parsley × 2 bunches","Fresh mint × 1 bunch","Fresh dill × 1 bunch","Fresh coriander × 1 bunch","Lemons × 8","Limes × 4","Fresh ginger root"],
+  "🧂 Spices":["Sumac","Za'atar","Cumin (ground)","Coriander (ground)","Turmeric","Cinnamon","Smoked paprika","Garam masala","Ras el hanout","Chilli flakes","Sea salt","Black pepper"],
+};
+let ic=0;
+const sg=document.getElementById('shopgrid');
+Object.entries(SHOP).forEach(([cat,items])=>{
+  let h=`<div class="shopcat"><div class="shopcattitle">${cat}</div>`;
+  items.forEach(item=>{const eid='si'+ic++;h+=`<div class="shopitem" id="${eid}" onclick="ts('${eid}')"><div class="chkbox" id="cb-${eid}"></div><span>${item}</span></div>`;});
+  sg.insertAdjacentHTML('beforeend',h+'</div>');
+});
+function ts(eid){document.getElementById('cb-'+eid).classList.toggle('ticked');document.getElementById(eid).classList.toggle('done');}
+
+buildPlan();
+setTimeout(()=>td('d1'),1400);
+</script>
+</body>
+</html>
